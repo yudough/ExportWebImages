@@ -1,4 +1,13 @@
-/*<javascriptresource><name>ExportWebImage</name><menu>automate</menu><about>jsxでイメージをjpgかpngでプレビューなしで書き出します。</about><category>Qscript</category><enableinfo>true</enableinfo></javascriptresource>*/preferences.rulerUnits=Units.PIXELS;var doc=app.activeDocument,doc,saveFile,folder,fsName,tmpFileName,saveOpt,w,h,res,saveGUI,extType,extTypePNG,extTypeJPG,longSide,unitType,exportDoc,shortSide,longSideNum,exportLongSide,exportShortSide,resizeLong,resizeShort;doc=app.activeDocument;docInfo();saveGUI=new Window("dialog","\u66f8\u304d\u51fa\u3057\u30aa\u30d7\u30b7\u30e7\u30f3",[0,100,402,326]);saveGUI.center();docLongSide();saveGUI.btnPnl=saveGUI.add("panel",[10,10,392,216],"");
+/*
+<javascriptresource>
+<name>ExportWebImage</name>
+<menu>automate</menu>
+<about>jsxでイメージをjpgかpngでプレビューなしで書き出します。</about>
+<category>Qscript</category>
+<enableinfo>true</enableinfo>
+</javascriptresource>
+*/
+preferences.rulerUnits=Units.PIXELS;var doc=app.activeDocument,doc,saveFile,folder,fsName,tmpFileName,saveOpt,w,h,res,saveGUI,extType,extTypePNG,extTypeJPG,longSide,unitType,exportDoc,shortSide,longSideNum,exportLongSide,exportShortSide,resizeLong,resizeShort;doc=app.activeDocument;docInfo();saveGUI=new Window("dialog","\u66f8\u304d\u51fa\u3057\u30aa\u30d7\u30b7\u30e7\u30f3",[0,100,402,326]);saveGUI.center();docLongSide();saveGUI.btnPnl=saveGUI.add("panel",[10,10,392,216],"");
 saveGUI.btnPnl=saveGUI.add("panel",[29,20,209,163],"\u30b5\u30a4\u30ba\u8a2d\u5b9a");saveGUI.btnPnl=saveGUI.add("panel",[222,20,372,163],"\u62e1\u5f35\u5b50\u8a2d\u5b9a");saveGUI.sText=saveGUI.add("statictext",[40,60,130,80],"\u9577\u8fba\u306e\u30b5\u30a4\u30ba:");saveGUI.longSide=saveGUI.add("edittext",[125,58,195,78],longSide);saveGUI.sText=saveGUI.add("statictext",[86,108,128,118],"\u5358\u4f4d:");saveGUI.rBtn1=saveGUI.add("radiobutton",[125,105,175,125],"px");
 saveGUI.rBtn2=saveGUI.add("radiobutton",[125,128,175,148],"%");saveGUI.rBtn1.value=!0;saveGUI.cBox1=saveGUI.add("checkbox",[240,46,312,86],"PNG");saveGUI.cBox2=saveGUI.add("checkbox",[240,80,312,120],"JPG");saveGUI.cBox1.value=!0;saveGUI.okBtn=saveGUI.add("button",[242,170,342,205],"\u3044\u3044\u3068\u601d\u3044\u307e\u3059",{name:"ok"});saveGUI.cancelBtn=saveGUI.add("button",[61,170,161,205],"\u30c0\u30e1\u3067\u3059\u306d",{name:"cancel"});
 saveGUI.okBtn.onClick=function(){longSideNum=eval(saveGUI.longSide.text);if(1>longSideNum)return alert("\u9577\u8fba\u306e\u30b5\u30a4\u30ba\u304c\u6b63\u3057\u304f\u5165\u529b\u3055\u308c\u3066\u3044\u307e\u305b\u3093"),!1;saveGUI.rBtn2.value?(unitType="percent",exportDoc=longSideNum):(unitType="px",exportDoc=resizeFix(resizeLong));extTypePNG=saveGUI.cBox1.value;extTypeJPG=saveGUI.cBox2.value;if(!extTypePNG&&!extTypeJPG)return alert("\u62e1\u5f35\u5b50\u304c\u9078\u629e\u3055\u308c\u3066\u304a\u308a\u307e\u305b\u3093\u3002\u3069\u308c\u304b\u4e00\u3064\u4ee5\u4e0a\u30c1\u30a7\u30c3\u30af\u3092\u5165\u308c\u3066\u4e0b\u3055\u3044\u3002"),
