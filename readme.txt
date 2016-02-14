@@ -30,7 +30,8 @@ ExportWebImage_beta.jsx
 	2.Photoshopを再起動します。
 	
 	3.Photoshopの画面で「 ファイル → 自動処理 」内にある「 ExportWebImage 」を実行して下さい。
-	
+・更新方法
+	ファイルを新しいものにそのまま上書きして下さい。
 ・アンインストール方法
 	ExportWebImage_beta.jsxを削除して下さい。
 
