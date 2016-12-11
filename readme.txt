@@ -1,4 +1,4 @@
-ExportWebImage_beta.jsx
+ExportWebImage_ver1.1.jsx
 
 【著作権者】QuirogaL
 【連絡先】twitter.com/yudough
