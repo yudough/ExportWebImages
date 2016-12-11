@@ -14,10 +14,10 @@ ExportWebImage_beta.jsx
 
 
 ・はじめに
-	ExportWebImage_beta.jsxは、PhotoshopのPNG、JPG画像をWebイメージ用に書き出すスクリプトです。
+	ExportWebImage_ver1.1.jsxは、PhotoshopのPNG、JPG画像をWebイメージ用に書き出すスクリプトです。
 	標準機能である画像プレビューの工程をスキップすることで、解像度の高い高重量なファイルを半分程度の速さで書き出すことが可能です。
 ・インストール方法
-	1.Photoshopのインストールディレクトリの「Scripts」フォルダ内に「ExportWebImage_beta.jsx」をコピーして下さい。
+	1.Photoshopのインストールディレクトリの「Scripts」フォルダ内に「ExportWebImage_ver1.1.jsx」をコピーして下さい。
 		
 		WindowsOSの場合は以下のディレクトリに保存して下さい。
 		（インストール先やPhotoshopのバージョンに合わせてディレクトリを変更してください。）
@@ -33,11 +33,11 @@ ExportWebImage_beta.jsx
 ・更新方法
 	ファイルを新しいものにそのまま上書きして下さい。
 ・アンインストール方法
-	ExportWebImage_beta.jsxを削除して下さい。
+	ExportWebImage_ver1.1.jsxを削除して下さい。
 
 ・使い方
 	1.	書き出したいドキュメントを開き、表示します。
-	2.	ファイル/自動処理にある「ExportWebImage_beta」を実行して下さい。
+	2.	ファイル/自動処理にある「ExportWebImage」を実行して下さい。
 	3.	起動するとダイアログボックスが表示されるので、指示に従って下さい。
 		（リサイズしたい場合、長辺のテキストボックスには必ず半角数字で入力するようお願いします。）
 	4.	リサイズが実行されます。
